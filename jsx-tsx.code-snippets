@@ -1,0 +1,84 @@
+{
+  // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+
+  "Section": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "sec",
+    "body": [
+      "// -----------------------------------------------------------------------------",
+      "// $1",
+      "// -----------------------------------------------------------------------------"
+    ],
+    "description": "Insert a code section header"
+  },
+
+  "Console log": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": ["cl", "log", "clg"],
+    "body": "console.log(\"$1\", $2)",
+    "description": "Log into console"
+  },
+
+  "Import default": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "im",
+    "body": "import $2 from \"$1\"",
+  },
+
+  "Import": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "imp",
+    "body": "import { $2 } from \"$1\"",
+  },
+
+  "Function": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "fn",
+    "body": ["function ${1:doSomething}(${2}) {", "  ${3}", "}"],
+  },
+
+  "Export function": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "efn",
+    "body": ["export function ${1:doSomething}(${2}) {", "  ${3}", "}"],
+  },
+
+  "Export default function": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "edfn",
+    "body": ["export default function ${1:doSomething}(${2}) {", "  ${3}", "}"],
+  },
+
+  "Const arrow function": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "cfn",
+    "body": ["const ${1:doSomething} = (${2}) => {", "  ${3}", "}"],
+  },
+
+  "Interface": {
+    "scope": "typescript,typescriptreact",
+    "prefix": ["ifc", "iface"]
+    "body": ["interface $1 {", "  $2", "}"],
+  },
+
+  // io-ts & zod
+
+  "Import io-ts/Decoder": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "id",
+    "body": "import * as D from \"io-ts/Decoder\"",
+    "description": "Import io-ts/Decoder"
+  },
+
+  "Make decoder": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "dec",
+    "body": "export const $1: D.Decoder<unknown, $1> = D.type({$2})",
+    "description": "Create decoder"
+  }
+}

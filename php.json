@@ -1,0 +1,124 @@
+{
+  "Class": {
+    "prefix": "class",
+    "body": ["class ${TM_FILENAME_BASE}", "{", "    $1", "}", ""],
+    "description": ""
+  },
+  "Public method": {
+    "prefix": "met",
+    "body": ["public function $1($2)", "{", "    $3", "}"],
+    "description": "New public method"
+  },
+  "Private method": {
+    "prefix": "pmet",
+    "body": ["protected function $1($2)", "{", "    $3", "}"],
+    "description": "New private method"
+  },
+  "Test method": {
+    "prefix": "test",
+    "body": [
+      "/** @test */",
+      "public function ${1:it_does_a_thing}($2)",
+      "{",
+      "    $3",
+      "}"
+    ],
+    "description": "New public method"
+  },
+  "Documented public method": {
+    "prefix": "dmet",
+    "body": [
+      "/**",
+      " * //",
+      " * ",
+      " * @return",
+      " */",
+      "public function $1($2)",
+      "{",
+      "    $3",
+      "}"
+    ],
+    "description": "New public method with doc block comment"
+  },
+  "Laravel migration foreign key": {
+    "prefix": "foreign",
+    "body": [
+      "\\$table->unsignedBigInteger('${1:foreign}_id');",
+      "\\$table->foreign('${1:foreign}_id')",
+      "    ->references('id')->on('${1:foreign}s')",
+      "    ->onDelete('cascade');"
+    ],
+    "description": "New forign key"
+  },
+  "Code seciton header": {
+    "prefix": "sec",
+    "body": [
+      "/*",
+      "|--------------------------------------------------------------------------",
+      "| ${1:Header}",
+      "|--------------------------------------------------------------------------",
+      "*/",
+      ""
+    ]
+  },
+  "Test setUp method": {
+    "prefix": "tsetup",
+    "body": [
+      "    public function setUp(): void",
+      "    {",
+      "        parent::setUp();",
+      "",
+      "        $1",
+      "    }"
+    ],
+    "description": "Test setUp method"
+  },
+  "Laravel controller action": {
+    "prefix": "action",
+    "body": [
+      "    /**",
+      "     * $2",
+      "     *",
+      "     * @param  \\Illuminate\\Http\\Request  $request",
+      "     * @return \\Illuminate\\Http\\Response",
+      "     */",
+      "    public function ${1:action}(Request $request)",
+      "    {",
+      "        $2",
+      "    }"
+    ],
+    "description": "Laravel controller action"
+  },
+  "Create pivot table": {
+    "prefix": "pivot",
+    "body": [
+      "Schema::create('${1}_${2}', function (Blueprint \\$table) {",
+      "    \\$table->unsignedBigInteger('${1}_id');",
+      "    \\$table->unsignedBigInteger('${2}_id');",
+      "    \\$table->primary(['${1}_id', '${2}_id']);",
+      "    \\$table->timestamps();",
+      "",
+      "    \\$table->foreign('${1}_id')",
+      "        ->references('id')->on('${1}s')",
+      "        ->onDelete('cascade');",
+      "",
+      "    \\$table->foreign('${2}_id')",
+      "        ->references('id')->on('${2}s')",
+      "        ->onDelete('cascade');",
+      "});"
+    ],
+    "description": "Create pivot table"
+  },
+  "Set guarded field": {
+    "prefix": "guarded",
+    "body": [
+      "/**",
+      " * The attributes that aren't mass assignable.",
+      " *",
+      " * @var array",
+      " */",
+      "protected \\$guarded = [];"
+    ],
+    "description": "Set guarded field"
+  }
+}
