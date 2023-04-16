@@ -6,42 +6,52 @@
 
   // Pollen syntax reference: https://docs.racket-lang.org/pollen/pollen-command-syntax.html
 
-  // General racket
   "Lambda": {
     "scope": "racket,pollen-markup,pollen-pagetree,pollen-template,pollen-template-html,pollen-preprocessor,pollen-preprocessor-html",
     "prefix": "\\lambda",
     "body": ["λ"],
     "description": "Lambda"
   },
+
   "Lozenge": {
+    "scope": "racket,pollen-markup,pollen-pagetree,pollen-template,pollen-template-html,pollen-preprocessor,pollen-preprocessor-html",
     "prefix": "\\l",
     "body": ["◊"],
     "description": "Pollen: Insert ◊ (lozenge), a Pollen control character"
   },
 
   "Pollen tag": {
+    "scope": "pollen-markup,pollen-pagetree,pollen-template,pollen-template-html,pollen-preprocessor,pollen-preprocessor-html",
     "prefix": "\\p",
     "body": ["◊${1:tag}{$2}"],
     "description": "Pollen tag ('Pollen-style command')"
   },
+
   "Pollen expression": {
+    "scope": "racket,pollen-markup,pollen-pagetree,pollen-template,pollen-template-html,pollen-preprocessor,pollen-preprocessor-html",
     "prefix": "\\pe",
     "body": ["◊($1)"],
     "description": "Pollen expression ('Racket-style command')"
   },
+
   "Pollen variable": {
+    "scope": "pollen-markup,pollen-pagetree,pollen-template,pollen-template-html,pollen-preprocessor,pollen-preprocessor-html",
     "prefix": "\\pv",
     "body": ["◊|$1|"],
     "description": "Pollen variable"
   },
+
+  // Tags
+
   "Emphasis": {
+    "scope": "pollen-markup,pollen-pagetree,pollen-template,pollen-template-html,pollen-preprocessor,pollen-preprocessor-html",
     "prefix": "\\em",
-    "body": "◊em{$1}",
-    "description": "description for Emphasis"
+    "body": "◊em{$1}"
   },
+
   "Strong emphasis": {
+    "scope": "pollen-markup,pollen-pagetree,pollen-template,pollen-template-html,pollen-preprocessor,pollen-preprocessor-html",
     "prefix": "\\strong",
-    "body": "◊strong{$1}",
-    "description": "description for \\strong"
+    "body": "◊strong{$1}"
   }
 }

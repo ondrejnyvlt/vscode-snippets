@@ -1,28 +1,21 @@
 {
-	"Front matter": {
-		"prefix": "---",
-		"body": [
-			"---",
-			"title: $1",
-			"subtitle: $2",
-			"author: $3",
-			"lang: cs",
-			"---"
-		],
-		"description": ""
-	},
-	"En dash": {
-		"prefix": "--",
-		"body": [
-			"–"
-		],
-		"description": ""
-	},
-	"Em dash": {
-		"prefix": "---",
-		"body": [
-			"—"
-		],
-		"description": ""
-	}
+  "Front matter": {
+    "prefix": "fm",
+    "body": [
+      "---",
+      "title: $1",
+      "subtitle: $2",
+      "author: $3",
+      "lang: cs",
+      "---"
+    ]
+  },
+  "En dash": {
+    "prefix": "--",
+    "body": ["–"]
+  },
+  "Em dash": {
+    "prefix": "---",
+    "body": ["—"]
+  }
 }
